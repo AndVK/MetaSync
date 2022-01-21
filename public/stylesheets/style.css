@@ -1,0 +1,76 @@
+body {
+  position: relative;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  border: 1px solid black;
+  height: 100vh;
+}
+
+/* * {
+  border: solid 1px black;
+} */
+
+.container {
+  background: #fff;
+  margin: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  font-size: large;
+}
+
+footer {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.table {
+  width: 1000px;
+}
+
+.table-crypto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-warning {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.crypto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.price-right {
+  text-align: end;
+}
+
+.price-24-center {
+  text-align: center;
+}
+
+.crypto-buttons {
+  display: flex;
+}

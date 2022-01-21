@@ -1,0 +1,36 @@
+<header>
+  <h1>MetaSync</h1>
+</header>
+<main class="container">
+  <h2>Choose your crypto:</h2>
+  <div class="crypto">
+    <div class="crypto-buttons">
+      {{>crypto}}
+    </div>
+    <button type="button" class="btn btn-warning" id="button-go">Go!</button>
+  </div>
+  <div class="table-crypto hide">
+    <table class="table table-bordered">
+      <thead>
+        <tr class="price-24-center">
+          <th scope="col">№</th>
+          <th scope="col">Name/symbol</th>
+          <th scope="col">Price, USD</th>
+          <th scope="col">Market Cap, USD</th>
+          <th scope="col">Change 24h, %</th>
+        </tr>
+      </thead>
+      <tbody id="table-coin">
+      </tbody>
+    </table>
+    <div class="send-email">
+      <form name="send-email-form" id="send-email-form">
+        <label><input type="email" name="email"></label>
+        <button type="submit" class="btn btn-warning">Send</button>
+      </form>
+    </div>
+  </div>
+</main>
+<footer>
+  <span>Directed by Mr.Player</span>
+</footer>
