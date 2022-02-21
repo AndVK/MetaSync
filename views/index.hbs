@@ -2,12 +2,16 @@
   <h1>MetaSync</h1>
 </header>
 <main class="container">
-  <h2>Choose your crypto:</h2>
+  <div class="choose-crypto">
+    <h2>Choose your crypto:</h2>
+  </div>
   <div class="crypto">
     <div class="crypto-buttons">
       {{>crypto}}
     </div>
-    <button type="button" class="btn btn-warning" id="button-go">Go!</button>
+    <div class="go-button">
+      <button type="button" class="btn btn-warning" id="button-go">Go!</button>
+    </div>
   </div>
   <div class="table-crypto hide">
     <table class="table table-bordered">
@@ -24,13 +28,13 @@
       </tbody>
     </table>
     <div class="send-email">
-      <form name="send-email-form" id="send-email-form">
-        <label><input type="email" name="email"></label>
+      <form name="send-email-form" id="send-email-form" class="class-send-email">
+        <label class="label-email"><input type="email" name="email" placeholder="E-mail"></label>
         <button type="submit" class="btn btn-warning">Send</button>
       </form>
     </div>
   </div>
 </main>
 <footer>
-  <span>Directed by Mr.Player</span>
+  <span>Directed by AndVLK</span>
 </footer>

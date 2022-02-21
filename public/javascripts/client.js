@@ -4,32 +4,31 @@ const coinMass = [];
 $buttonGo.addEventListener('click', async (event) => {
   event.preventDefault();
   
-  const a = $('input:checked'); // выбираем все отмеченные checkbox
-  const out = []; // выходной массив
-  for (let x = 0; x < a.length; x += 1) { // перебераем все объекты
-    out.push(a[x].labels[0].innerHTML); // добавляем значения в выходной массив
+  const a = $('input:checked'); 
+  const out = [];
+  for (let x = 0; x < a.length; x += 1) {
+    out.push(a[x].labels[0].innerHTML); 
   }
 
   const response = await fetch('/meta');
   const dataCoins = await response.json();
+  console.log('response =====>', dataCoins);
 
-  // const cryptoMass = ['Bitcoin', 'Ethereum', 'XRP', 'Dogecoin', 'Litecoin', 'TRON', 'Bitcoin Cash', 'Monero', 'Dash', 'BNB'];
   const $table = document.getElementById('table-coin');
 
-  // заполняем массив из сервера
-  // eslint-disable-next-line no-restricted-syntax
-  function createTr(data, index){
+  function createTr(data, index) {
     return `<tr>
     <th scope="row">${index + 1}</th>
     <td class="price-right">${data.name}/${data.symbol}</td>
     <td class="price-right">${data.quote.USD.price.toFixed(3)}</td>
     <td class="price-right">${data.quote.USD.market_cap.toFixed(2)}</td>
     <td class="price-24-center">${data.quote.USD.percent_change_24h.toFixed(2)}</td>
-  </tr>`
+    </tr>`;
   }
   for (const item of out) {
     const coin = dataCoins.data.find((element) => element.name === item);
     if (coin) {
+      console.log(coin);
       coinMass.push(coin);
     }
   }
